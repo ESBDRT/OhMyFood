@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Roboto;
 }
 
 
@@ -20,7 +21,6 @@
 
     .location {
         background-color: #EAEAEA;
-        font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: bold;
@@ -39,12 +39,11 @@
         background-color: #F6F6F6;
     }
 
-    .H1 {
+    .H1head {
         padding-top: 25px;
         padding-left: 70px;
         padding-right: 70px;
         padding-bottom: 15px;
-        font-family: Roboto;
         font-size: 24px;
     }
 
@@ -53,7 +52,6 @@
         padding-left: 26px;
         padding-right: 34px;
         font-size: 18px;
-        font-family: Roboto;
     }
 
     .explore-button {
@@ -65,7 +63,6 @@
         color: white;
         background-color: #FB76C1;
         margin-bottom: 50px;
-        font-family: Roboto;
         font-size: 15px;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
@@ -75,25 +72,23 @@
     }
 
     .fonctionnement {
-        position: relative;
+        justify-content: center;
     }
 
     .H2fonc {
         padding-top: 40px;
         padding-left: 20px;
-        font-family: Roboto;
         font-weight: bold;
     }
 
     .fonc-button {
-        width: 322.486px;
+        width: 85%;
         height: 72.379px;
         margin-bottom: 20px;
         margin-left: 40px;
         margin-right: 20px;
         border-radius: 20px;
         border: none;
-        font-family: Roboto;
         font-weight: bold;
         font-size: 16px;
         background-color: #F6F6F6;
@@ -122,7 +117,7 @@
     }
 
     .dots {
-        position:relative;
+        margin-bottom: 25px;
     }
 
     .numberedDots1 {
@@ -154,6 +149,81 @@
         color: white;
         border-radius: 50%;
     }
+
+    .restaurants {
+        background-color: #EAEAEA;
+    }
+
+    .H3rest {
+        font-weight: bold;
+        font-size: 24px;
+        padding-left: 20px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
+    .card {
+        display: flex;
+        background-color: white;
+        border-radius: 15px;
+        margin-top: 20PX;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: 23px;
+    }
+
+    .restaurants-list {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 80px;
+    }
+
+    .restaurants-list img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .restaurant-text {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .fa-fav {
+        text-align: right;
+        transform: translateY(-20px);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        padding: 22px 25px;
+        color: white;
+    }
+
+    .footer-logo {
+        padding-bottom: 10px;
+    }
+
+    .footer-logo-img {
+        width: 137.582px;
+        height: 27px;
+    }
+
+    .footer-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .fa-footer {
+        padding-right: 10px;
+    }
 }
 
 
@@ -174,7 +244,6 @@
 
     .location {
         background-color: #EAEAEA;
-        font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: bold;
@@ -192,20 +261,17 @@
         background-color: #F6F6F6;
     }
 
-    .H1 {
+    .H1head {
         padding-top: 25px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
-        font-family: Roboto;
         font-size: 40px;
     }
 
     .phead {
         padding-top: 0;
         padding-left: 30px;
-        padding-right: 30px;
-        font-family: Roboto;
         font-size: 18px;
         font-style: normal;
     }
@@ -219,9 +285,86 @@
         color: white;
         background-color: #FB76C1;
         margin-bottom: 50px;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
 
     .explore-button:hover {
         background-color: #FF51EB;
+    }
+
+    .fonctionnement {
+        text-align: center;
+    }
+
+    .H2fonc {
+        padding-top: 40px;
+        font-weight: bold;
+        text-align: left;
+        padding-left: 26%;
+    }
+
+    .fonc-button {
+        width: 15%;
+        height: 72.379px;
+        margin-bottom: 20px;
+        margin-left: 40px;
+        border-radius: 20px;
+        border: none;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #F6F6F6;
+        text-align: left;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .fonc-button:first-of-type {
+        margin-top: 30px;
+    }
+
+    .fa-fonc-logo-1 {
+        padding-right: 20px;
+        margin-left: 35px;
+    }
+
+    .fa-fonc-logo-2 {
+        padding-right: 17px;
+        margin-left: 35px;
+     
+    }
+
+    .fa-fonc-logo-3 {
+        padding-right: 17px;
+        margin-left: 35px;
+    }
+
+    .numberedDots1 {
+        transform: translateY(-70px);
+        width: 25px;
+        height: 25px;
+        border: none;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 50%;
+    }
+
+    .numberedDots2 {
+        transform: translateY(-70px);
+        width: 25px;
+        height: 25px;
+        border: none;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 50%;
+    }
+
+    .numberedDots3 {
+      
+        transform: translateY(-70px);
+        width: 25px;
+        height: 25px;
+        border: none;
+        background-color: #9356DC;
+        color: white;
+        border-radius: 50%;
     }
 }    
