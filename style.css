@@ -1,15 +1,60 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Roboto;
 }
 
 
 /*MOBILE*/
 @media (max-width:768px) {
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.8); 
+        z-index: 9998;
+        animation: fadeOverlay 3s ease-in-out forwards; 
+    }
+    
+    @keyframes fadeOverlay {
+        0% { background-color: rgba(128, 128, 128, 0.8); }
+        100% { background-color: rgba(128, 128, 128, 0); }
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3; 
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear infinite;
+        position: fixed;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+    }
+    
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes hide {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+
     .header {
         display: flex;
         justify-content: center;
+        align-items: center;  
+    }
+
+    .fa-menu-icon {
+        transform: translateX(-75px) translateY(-1px);
     }
 
     .logo {
@@ -19,9 +64,18 @@
         height: 36px;
     }
 
+    .menu-background {
+        background-image: url("Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        height: 400px;
+        width: 100%;
+    }
+
     .location {
         background-color: #EAEAEA;
         font-size: 16px;
+        font-family: roboto;  
         font-style: normal;
         font-weight: bold;
         line-height: normal;
@@ -37,6 +91,7 @@
     .headline {
         text-align: center;
         background-color: #F6F6F6;
+        font-family: roboto;
     }
 
     .H1head {
@@ -61,10 +116,11 @@
         border-color: transparent;
         border-radius: 30px;
         color: white;
-        background-color: #FB76C1;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
         margin-bottom: 50px;
         font-size: 15px;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        font-family: roboto;
     }
 
     .explore-button:hover {
@@ -78,7 +134,11 @@
     .H2fonc {
         padding-top: 40px;
         padding-left: 20px;
-        font-weight: bold;
+        font-family: roboto;
+    }
+
+    .fonctionnement-buttons {
+        padding-bottom: 50px;
     }
 
     .fonc-button {
@@ -90,6 +150,7 @@
         margin-right: 20px;
         border-radius: 20px;
         border: none;
+        font-family: roboto;
         font-weight: bold;
         font-size: 16px;
         background-color: #F6F6F6;
@@ -122,6 +183,8 @@
         justify-content: center;
         text-decoration: none;
         display: flex;
+        font-size: 12px;
+        align-items: center;
         width: 20px;
         height: 20px;
         border: none;
@@ -137,6 +200,7 @@
 
     .restaurants {
         background-color: #EAEAEA;
+        font-family: roboto;
     }
 
     .H3rest {
@@ -173,11 +237,35 @@
         border-radius: 15px 15px 0px 0px;
     }
 
+    .new-badge {
+        display: flex;
+        border: 2px none black;
+        position: absolute;
+        border-radius: 3px;
+        width: 80px;
+        height:29px;
+        z-index: 9999;
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute;
+        background-color: #99E2D0;
+        color:#008766;
+        justify-content: center;
+        align-items: center;
+        top: 20px;
+        right: 20px;              
+    }
+
     .restaurant-text {
         display: flex;
         flex-direction: column;
         padding: 15px;
         width: 100%;
+    }
+
+    .price {
+        display: flex;
+        justify-content: flex-end;
     }
 
     .fa-fav {
@@ -191,6 +279,7 @@
         background-color: #353535;
         padding: 22px 25px;
         color: white;
+        font-family: roboto;
     }
 
     .footer-logo {
@@ -198,14 +287,19 @@
     }
 
     .footer-logo-img {
+        display: flex;
         width: 137.582px;
-        height: 27px;
+        height: 20px;
+        padding-bottom: 10px;
+        filter: brightness(0);
+        -webkit-filter: brightness(30);
+        align-items: flex-start;
     }
 
     .footer-txt {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
     }
 
     .fa-footer {
@@ -217,16 +311,110 @@
         font-weight: normal;
         font-size:smaller;
     }
+
+    .menu {
+        background-color:#F6F6F6;
+        border-radius: 50px;
+    }
+
+    .menu-title {
+        font-family: 'Shrikhand';
+        padding-left: 20px;
+        padding-top: 40px;
+    }
+    
+    .title {
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+
+    .starters-title {
+        border-bottom: 3px solid #99E2D0;
+    }
+
+    .starters {
+        display: flex;
+        flex-direction: column;
+        font-family: Roboto;
+    }
+
+    .starters-card {
+        display: flex;
+        font-family: Roboto;
+        background-color: white;
+        border-radius: 15px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        width: 85%;
+        margin-top: 20PX;
+        margin-left: 25px;
+        padding-left: 20px;
+        font-weight: bold;
+    }
+
+    .order-checkout {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
 }
 
 
 /*DESKTOP AND TABLETTE*/
 @media (min-width:768px) {
     
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.8); /* Initial color with more transparency */
+        z-index: 9999; /* Ensure the overlay is below the loader but above other content */
+        animation: fadeOverlay 3s ease-in-out forwards; /* Animation for the fade */
+    
+        /* Other styles for the overlay... */
+    }
+    
+    @keyframes fadeOverlay {
+        0% { background-color: rgba(128, 128, 128, 0.8); } /* Initial color with more transparency */
+        100% { background-color: rgba(128, 128, 128, 0); } /* Fully transparent grey at the end */
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear infinite, hide 3s forwards; /* Added hide animation */
+  
+    /* Centering the loader */
+        position: fixed;
+        top: 50vw;
+        left: 50vw;
+        z-index: 9999;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes hide {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+  }
+ 
+
     .header {
         display: flex;
         justify-content: center;
     }
+
+
 
     .logo {
         padding-top: 30px;
@@ -243,6 +431,7 @@
         line-height: normal;
         text-align: center;
         padding: 17px;
+        font-family: roboto;
     }
 
     .fa-location-dot {
@@ -252,6 +441,7 @@
     .headline {
         text-align: center;
         background-color: #F6F6F6;
+        font-family: roboto;
     }
 
     .H1head {
@@ -276,9 +466,11 @@
         border-color: transparent;
         border-radius: 30px;
         color: white;
-        background-color: #FB76C1;
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
         margin-bottom: 50px;
+        cursor: pointer;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        font-family: roboto;
     }
 
     .explore-button:hover {
@@ -287,6 +479,7 @@
 
     .fonctionnement {
         text-align: center;
+        font-family: roboto;
     }
 
     .H2fonc {
@@ -300,6 +493,7 @@
     .fonctionnement-buttons {
         padding-left: 70px;
         padding-right: 70px;
+        padding-bottom: 25px;
     }
 
     .fonc-button {
@@ -307,7 +501,7 @@
         height: 72.379px;
         padding-bottom: 17px;
         margin-bottom: 20px;
-        margin-left: 40px;
+        margin-left: 2%;
         border-radius: 20px;
         border: none;
         font-weight: bold;
@@ -315,6 +509,7 @@
         background-color: #F6F6F6;
         text-align: left;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        font-family: roboto;
     }
 
     .fa-fonc-logo-1 {
@@ -338,6 +533,8 @@
         justify-content: center;
         text-decoration: none;
         display: flex;
+        font-size: 12px;
+        align-items: center;
         width: 20px;
         height: 20px;
         border: none;
@@ -360,6 +557,7 @@
         padding-left: 4%;
         padding-top: 50px;
         padding-bottom: 10px;
+        font-family: roboto;
     }
 
     .card {
@@ -372,6 +570,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         width: 43%;
+        font-family: roboto;
     }
 
     .restaurants-list {
@@ -379,7 +578,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        padding-bottom: 80px;
+        padding-bottom: 40px;
         column-gap: 100px;
         row-gap: 50px;
     }
@@ -389,6 +588,25 @@
         height: 200px;
         object-fit: cover;
         border-radius: 15px 15px 0px 0px;
+    }
+
+    .new-badge {
+        display: flex;
+        border: 2px none black;
+        border-radius: 3px;
+        width: 80px;
+        height:29px;
+        z-index: 9999;
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute;
+        background-color: #99E2D0;
+        color:#008766;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 20px;
+        right: 30px;              
     }
 
     .restaurant-text {
@@ -405,10 +623,12 @@
 
     .footer {
         display: flex;
-        flex-direction: column;
+        flex-direction: row-reverse;
         background-color: #353535;
         padding: 22px 25px;
         color: white;
+        height: 80px;
+        font-family: roboto;
     }
 
     .footer-logo {
@@ -418,13 +638,21 @@
     .footer-logo-img {
         display: flex;
         width: 137.582px;
-        height: 27px;
+        height: 20px;
+        filter: brightness(0);
+        -webkit-filter: brightness(30);
+        padding-left: 50px;
+        transform: translateY(50px);
+        margin-left: 15px;
     }
 
     .footer-txt {
+        align-items: center;
+        justify-content: flex-end;
         display: flex;
-        flex-direction: row;
         gap: 20px;
+        padding-top: 40px;
+        cursor: pointer;
     }
 
     .fa-footer {
@@ -434,6 +662,57 @@
     .Pfooter {
         font-family: Roboto;
         font-weight: normal;
-        font-size:smaller;
+
+    }
+
+    .Pfooter::first-letter {
+        margin-left: 30px;
+    }
+
+    .menu-background {
+        background-image: url("Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+    }
+
+    .menu-title {
+        font-family: 'Shrikhand';
+        display: flex;
+        justify-content: center;
+        padding-top: 45px;
+    }
+
+    .menu {
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: #F6F6F6;
+        border-radius: 20px;
+    }
+
+    .fa-palette {
+        transform: translateX(35px) translateY(20px);
+    }
+
+    .starters-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        padding-top: 50px;
+        padding-left: 20px;
+    }
+
+    .starters-title {
+        border-bottom: 3px solid #99E2D0;
+    }
+
+    .price {
+        display: flex;
+        justify-content: flex-end;
     }
 }

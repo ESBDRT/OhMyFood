@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Roboto:wght@500&family=Shrikhand&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>OhMyFood</title>
 </head>
 <body>
+    <div class="overlay"></div> 
+    <div class="loader"></div>
     <header>
         <div class="header">
             <img class="logo" src="Images et textes Ohmyfood/images/logo/ohmyfood.png"> 
@@ -29,9 +32,9 @@
             <h2 class="H2fonc">Fonctionnement</h2>
         </div>
         <div class="fonctionnement-buttons">
-            <button class="fonc-button"><a class="numberedDots" href="">1</a><i class="fa-solid fa-fonc-logo-1 fa-xl fa-mobile-screen-button" style="color: #a3a5a8;"></i>Choisissez un restaurant</button>                
-            <button class="fonc-button"><a class="numberedDots" href="">2</a><i class="fa-solid fa-fonc-logo-2 fa-xl fa-list-ul" style="color: #a3a5a8;"></i>Composez votre menu</button>            
-            <button class="fonc-button"><a class="numberedDots" href="">3</a><i class="fa-solid fa-fonc-logo-3 fa-store fa-xl"  style="color: #9356DC;"></i>Dégustez au restaurant</button>
+            <button class="fonc-button"><span class="numberedDots">1</span><i class="fa-solid fa-fonc-logo-1 fa-xl fa-mobile-screen-button" style="color: #a3a5a8;"></i>Choisissez un restaurant</button>                
+            <button class="fonc-button"><span class="numberedDots">2</span><i class="fa-solid fa-fonc-logo-2 fa-xl fa-list-ul" style="color: #a3a5a8;"></i>Composez votre menu</button>            
+            <button class="fonc-button"><span class="numberedDots">3</span><i class="fa-solid fa-fonc-logo-3 fa-store fa-xl"  style="color: #9356DC;"></i>Dégustez au restaurant</button>
         </div>
     </div>
     <section class="restaurants">
@@ -39,8 +42,9 @@
             <h3 class="H3rest">Restaurants</h3>           
         </div>
         <div class="restaurants-list">
-            <article class="card">
+            <article class="card" href="menu1.html">
                 <img src="Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Image du restaurant">
+                <span class="new-badge">NOUVEAU</span>
                 <div class="restaurant-text">
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
@@ -49,6 +53,7 @@
             </article>
             <article class="card">
                 <img src="Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Image du restaurant">
+                <span class="new-badge">NOUVEAU</span>
                 <div class="restaurant-text">
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
@@ -74,9 +79,7 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="footer-logo">
-            <img class="footer-logo-img" src="Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
-        </div>
+        <img class="footer-logo-img" src="Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood">
         <div class="footer-txt">
             <p><i class="fa-solid fa-footer fa-utensils" style="color: #ffffff;"></i>Proposer un restaurant</p>
             <p><i class="fa-solid fa-footer fa-handshake-angle" style="color: #ffffff;"></i>Devenir partenaire</p>
