@@ -135,6 +135,10 @@
         font-size: 15px;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         font-family: roboto;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: appearAnimation 1s forwards;
+        animation-delay: 4.25s;
     }
 
     .explore-button:hover {
@@ -317,9 +321,8 @@
     }
 
     .fa-fav::before {
-        font-weight: bold;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        background-clip: text;
+        background-clip: text;;
     }
 
     .fa-fav:active {
@@ -391,6 +394,116 @@
         margin-left: 10px;
         margin-right: 10px;
         font-family: roboto;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: appearAnimation 0.5s forwards;
+    }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+
+    @keyframes appearAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    animation: appearAnimation 0.5s forwards;
+    }
+
+    .menu-title {
+        animation-delay: 0s;
+    }
+
+    .menu-title .title {
+        animation-delay: 0.25s;
+    }
+
+    .menu-title .title .starters-title {
+        animation-delay: 1s;
+    }
+
+    .starters-list {
+        animation-delay: 1s;
+    }
+
+    .dishes-title {
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list {
+        animation-delay: 2s;
+    }
+
+    .desserts-title {
+        animation-delay: 3s;
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+    }
+
+    .desserts-list {
+        animation-delay: 3.25s;
+    }
+
+    .starters-list .menu-card:nth-child(1) {
+        animation-delay: 1s;
+    }
+    
+    .starters-list .menu-card:nth-child(2) {
+        animation-delay: 1.25s;
+    }
+    
+    .starters-list .menu-card:nth-child(3) {
+        animation-delay: 1.50s;
+    }
+
+    .starters-list .menu-card:nth-child(4) {
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list .menu-card:nth-child(1) {
+        animation-delay: 2s;
+    }
+    
+    .dishes-list .menu-card:nth-child(2) {
+        animation-delay: 2.25s;
+    }
+    
+    .dishes-list .menu-card:nth-child(3) {
+        animation-delay: 2.50s;
+    }
+
+    .desserts-list .menu-card:nth-child(1) {
+        animation-delay: 3.50s;
+    }
+    
+    .desserts-list .menu-card:nth-child(2) {
+        animation-delay: 3.75s;
+    }
+    
+    .desserts-list .menu-card:nth-child(3) {
+        animation-delay: 4s;
     }
 
     .menu-title {
@@ -737,6 +850,116 @@
         margin-right: 10px;
         font-family: roboto;
         width: 70%;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: appearAnimation 0.5s forwards;
+    }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+
+    @keyframes appearAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    animation: appearAnimation 0.5s forwards;
+    }
+
+    .menu-title {
+        animation-delay: 0s;
+    }
+
+    .menu-title .title {
+        animation-delay: 0.25s;
+    }
+
+    .menu-title .title .starters-title {
+        animation-delay: 1s;
+    }
+
+    .starters-list {
+        animation-delay: 1s;
+    }
+
+    .dishes-title {
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list {
+        animation-delay: 2s;
+    }
+
+    .desserts-title {
+        animation-delay: 3s;
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+    }
+
+    .desserts-list {
+        animation-delay: 3.25s;
+    }
+
+    .starters-list .menu-card:nth-child(1) {
+        animation-delay: 1s;
+    }
+    
+    .starters-list .menu-card:nth-child(2) {
+        animation-delay: 1.25s;
+    }
+    
+    .starters-list .menu-card:nth-child(3) {
+        animation-delay: 1.50s;
+    }
+
+    .starters-list .menu-card:nth-child(4) {
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list .menu-card:nth-child(1) {
+        animation-delay: 2s;
+    }
+    
+    .dishes-list .menu-card:nth-child(2) {
+        animation-delay: 2.25s;
+    }
+    
+    .dishes-list .menu-card:nth-child(3) {
+        animation-delay: 2.50s;
+    }
+
+    .desserts-list .menu-card:nth-child(1) {
+        animation-delay: 3.50s;
+    }
+    
+    .desserts-list .menu-card:nth-child(2) {
+        animation-delay: 3.75s;
+    }
+    
+    .desserts-list .menu-card:nth-child(3) {
+        animation-delay: 4s;
     }
 
     .restaurants-list {
@@ -878,15 +1101,27 @@
         align-items: center;
     }
 
+    .dishes-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desserts-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .title {
         padding-top: 50px;
-        padding-left: 20px;
+        position: relative;
+        right: -13%;
+        width: 50%;
     }
 
     .starters-title {
         border-bottom: 3px solid #99E2D0;
-        display: flex;
-        align-items: flex;
     }
 
     .price-div {
@@ -943,9 +1178,11 @@
     .fa-fav::before {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
+        animation: 2s;
     }
 
     .fa-fav:active {
+        font-weight: bold;
         -webkit-text-fill-color: transparent;
     }
 }
@@ -984,7 +1221,7 @@
         background-color: #fff;
         box-shadow: 32px 0 #fff, -32px 0 #fff;
         position: relative;
-        animation: flash 0.75s ease-out 2 forwards;
+        animation: flash 0.75s ease-out 3 forwards;
         z-index: 9999;
         top: 50vw;
         left: 50vw;
@@ -1084,6 +1321,20 @@
         cursor: pointer;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
         font-family: roboto;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: appearAnimation 1s forwards;
+        animation-delay: 4.25s;
+    }
+
+    
+
+    @keyframes appearAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
     }
 
     .explore-button:hover {
@@ -1323,7 +1574,118 @@
         flex-wrap: wrap;
         width: 65%;
         font-family: roboto;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: appearAnimation 0.5s forwards;
     }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    opacity: 0;
+    transform: translateY(20px);
+    }
+
+    @keyframes appearAnimation {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+
+    .menu-title,
+    .title,
+    .starters-title,
+    .dishes-title,
+    .desserts-title,
+    .starters-list,
+    .dishes-list,
+    .desserts-list {
+    animation: appearAnimation 0.5s forwards;
+    }
+
+    .menu-title {
+        animation-delay: 0s;
+    }
+
+    .menu-title .title {
+        animation-delay: 0.25s;
+    }
+
+    .menu-title .title .starters-title {
+        animation-delay: 1s;
+    }
+
+    .starters-list {
+        animation-delay: 1s;
+    }
+
+    .dishes-title {
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list {
+        animation-delay: 2s;
+    }
+
+    .desserts-title {
+        animation-delay: 3s;
+        border-bottom: 3px solid #99E2D0;
+        width: 50px;
+    }
+
+    .desserts-list {
+        animation-delay: 3.25s;
+    }
+
+    .starters-list .menu-card:nth-child(1) {
+        animation-delay: 1s;
+    }
+    
+    .starters-list .menu-card:nth-child(2) {
+        animation-delay: 1.25s;
+    }
+    
+    .starters-list .menu-card:nth-child(3) {
+        animation-delay: 1.50s;
+    }
+
+    .starters-list .menu-card:nth-child(4) {
+        animation-delay: 1.75s;
+    }
+
+    .dishes-list .menu-card:nth-child(1) {
+        animation-delay: 2s;
+    }
+    
+    .dishes-list .menu-card:nth-child(2) {
+        animation-delay: 2.25s;
+    }
+    
+    .dishes-list .menu-card:nth-child(3) {
+        animation-delay: 2.50s;
+    }
+
+    .desserts-list .menu-card:nth-child(1) {
+        animation-delay: 3.50s;
+    }
+    
+    .desserts-list .menu-card:nth-child(2) {
+        animation-delay: 3.75s;
+    }
+    
+    .desserts-list .menu-card:nth-child(3) {
+        animation-delay: 4s;
+    }
+
 
     .menu-links {
         width: 100%;
@@ -1423,14 +1785,14 @@
         transform: translateY(50px);
     }
 
-
     .fa-fav::before {
-        font-weight: normal;
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
         background-clip: text;
+        animation: 2s;
     }
 
     .fa-fav:active {
+        font-weight: bold;
         -webkit-text-fill-color: transparent;
     }
 }
