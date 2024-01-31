@@ -1257,7 +1257,6 @@
         display: flex;
         position: relative;
         width: 90%;
-        left: 50;
     }
 
     .header-logo {
@@ -1723,7 +1722,6 @@
     .starters-title {
         border-bottom: 3px solid #99E2D0;
         width: 50px;        
-        transform: translateX();
     }
 
     .price-div {
