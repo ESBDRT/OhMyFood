@@ -1221,7 +1221,7 @@
         background-color: #fff;
         box-shadow: 32px 0 #fff, -32px 0 #fff;
         position: relative;
-        animation: flash 0.75s ease-out 3 forwards;
+        animation: flash 0.75s ease-out 2 forwards;
         z-index: 9999;
         top: 50vw;
         left: 50vw;
