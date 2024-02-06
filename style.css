@@ -69,8 +69,6 @@
     }
 
     .header-arrow {
-        display: flex;
-        position: relative;
         width: 80%;
     }
 
@@ -139,6 +137,7 @@
         transform: translateY(20px);
         animation: appearAnimation 1s forwards;
         animation-delay: 4.25s;
+        cursor: pointer;
     }
 
     .explore-button:hover {
@@ -152,7 +151,7 @@
     .H2fonc {
         padding-top: 40px;
         padding-left: 20px;
-        font-family: roboto;
+        font-family: Roboto;
     }
 
     .fonctionnement-buttons {
@@ -198,15 +197,7 @@
         color: #7E7E7E;
     }
 
-    .fa-fonc-logo-1:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-2:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-3:hover {
+    .fa-logo-hover:hover {
         color: #9356DC;
     }
 
@@ -298,15 +289,6 @@
         text-overflow: ellipsis;
     }
 
-
-    .price-div {
-        display: flex;
-        align-items: center;
-        width: 40px;
-        transform: translateY(10px);
-    }
-
-
     .fav-icon {
         display: flex;
         justify-content: flex-end;
@@ -318,17 +300,9 @@
 
     .fa-fav {
         transform: translateX(-30px) translateY(-20px);
+        background-clip: text;
     }
 
-    .fa-fav::before {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        background-clip: text;;
-    }
-
-    .fa-fav:active {
-        font-weight: bold;
-        -webkit-text-fill-color: transparent;
-    }
 
     .footer {
         display: flex;
@@ -357,6 +331,7 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+        cursor: pointer;
     }
 
     .fa-footer {
@@ -597,78 +572,13 @@
 
 /*TABLETTE*/
 @media (min-width:601px) {
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(128, 128, 128, 0.8); 
-        z-index: 9999; 
-        animation: fadeOverlay 3s ease-in-out forwards;
-    }
-    
-    @keyframes fadeOverlay {
-        0% {
-          background-color: rgba(128, 128, 128, 0.8);
-        }
-        100% {
-          background-color: rgba(128, 128, 128, 0);
-          opacity: 0;
-          visibility: hidden;
-          z-index: -1;
-        }
-      }
-
-    .loader {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #fff;
-        box-shadow: 32px 0 #fff, -32px 0 #fff;
-        position: relative;
-        animation: flash 0.75s ease-out 2 forwards;
-        z-index: 9999;
-        top: 50vw;
-        left: 50vw;
-      }
-      
-      @keyframes flash {
-        0%, 50% {
-          opacity: 1;
-          visibility: visible;
-          background-color: #FFF2;
-          box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
-        }
-        100% {
-          opacity: 0;
-          visibility: hidden;
-        }
-      }
- 
-
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
     .menu-header {
-        display: flex;
         padding: 25px 0px 25px 0px;
-        justify-content: center;
-        align-items: center;
     }
 
     .header-arrow {
-        display: flex;
-        position: relative;
         width: 90%;
-    }
-
-    .header-logo {
-        display: flex;
-        position:absolute;
     }
 
     .logo {
@@ -678,30 +588,7 @@
         height: 34.202px;
     }
 
-
-    .location {
-        background-color: #EAEAEA;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: bold;
-        line-height: normal;
-        text-align: center;
-        padding: 17px;
-        font-family: roboto;
-    }
-
-    .fa-location-dot {
-        margin-right: 14px;
-    }
-
-    .headline {
-        text-align: center;
-        background-color: #F6F6F6;
-        font-family: roboto;
-    }
-
     .H1head {
-        padding-top: 25px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -709,37 +596,20 @@
     }
 
     .phead {
-        padding-top: 0;
         padding-left: 30px;
-        font-size: 18px;
-        font-style: normal;
     }
 
     .explore-button {
         margin-top: 35px;
         width: 218px;
         height: 50px;
-        border-color: transparent;
-        border-radius: 30px;
-        color: white;
-        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-        margin-bottom: 50px;
-        cursor: pointer;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        font-family: roboto;
-    }
-
-    .explore-button:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);;
     }
 
     .fonctionnement {
         text-align: center;
-        font-family: roboto;
     }
 
     .H2fonc {
-        padding-top: 40px;
         font-weight: bold;
         text-align: left;
         padding-left: 6%;
@@ -752,14 +622,8 @@
 
     .fonc-button {
         width: 28%;
-        height: 72.379px;  
         border-radius: 20px;
-        border: none;
-        font-weight: bold;
         font-size: 11px;
-        background-color: #F6F6F6;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        font-family: roboto;
         margin-left: 0;
 
     }
@@ -779,44 +643,13 @@
         margin-left: 15%;
     }
 
-    .fa-fonc-logo-1:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-2:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-3:hover {
-        color: #9356DC;
-    }
-
-    .numberedDots {
-        transform: translateX(-10px) translateY(17px);
-        justify-content: center;
-        text-decoration: none;
-        display: flex;
-        font-size: 12px;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border: none;
-        background-color: #9356DC;
-        color: white;
-        border-radius: 50%;
-        font-weight: normal;
-    }
-
     .restaurants {
-        background-color: #F6F6F6;
         padding-right: 20px;
         padding-left: 20px;
         justify-content: center;
     }
 
     .H3rest {
-        font-weight: bold;
-        font-size: 24px;
         padding-left: 6%;
         padding-top: 50px;
         padding-bottom: 10px;
@@ -824,145 +657,18 @@
     }
 
     .card {
-        display: flex;
-        background-color: white;
-        border-radius: 15px;
-        margin-top: 20PX;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         flex-direction: row;
         margin-left: 0px;
         flex-wrap: wrap;
         width: 41%;
-        font-family: roboto;
     }
 
     .menu-card {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        border-radius: 15px;
-        margin-top: 20PX;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 10px;
-        margin-right: 10px;
-        font-family: roboto;
         width: 70%;
         overflow: hidden;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: appearAnimation 0.5s forwards;
-    }
-
-    .menu-title,
-    .title,
-    .starters-title,
-    .dishes-title,
-    .desserts-title,
-    .starters-list,
-    .dishes-list,
-    .desserts-list {
-    opacity: 0;
-    transform: translateY(20px);
-    }
-
-    @keyframes appearAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    }
-
-    .menu-title,
-    .title,
-    .starters-title,
-    .dishes-title,
-    .desserts-title,
-    .starters-list,
-    .dishes-list,
-    .desserts-list {
-    animation: appearAnimation 0.5s forwards;
-    }
-
-    .menu-title {
-        animation-delay: 0s;
-    }
-
-    .menu-title .title {
-        animation-delay: 0.25s;
-    }
-
-    .menu-title .title .starters-title {
-        animation-delay: 1s;
-    }
-
-    .starters-list {
-        animation-delay: 1s;
-    }
-
-    .dishes-title {
-        border-bottom: 3px solid #99E2D0;
-        width: 50px;
-        animation-delay: 1.75s;
-    }
-
-    .dishes-list {
-        animation-delay: 2s;
-    }
-
-    .desserts-title {
-        animation-delay: 3s;
-        border-bottom: 3px solid #99E2D0;
-        width: 50px;
-    }
-
-    .desserts-list {
-        animation-delay: 3.25s;
-    }
-
-    .starters-list .menu-card:nth-child(1) {
-        animation-delay: 1s;
-    }
-    
-    .starters-list .menu-card:nth-child(2) {
-        animation-delay: 1.25s;
-    }
-    
-    .starters-list .menu-card:nth-child(3) {
-        animation-delay: 1.50s;
-    }
-
-    .starters-list .menu-card:nth-child(4) {
-        animation-delay: 1.75s;
-    }
-
-    .dishes-list .menu-card:nth-child(1) {
-        animation-delay: 2s;
-    }
-    
-    .dishes-list .menu-card:nth-child(2) {
-        animation-delay: 2.25s;
-    }
-    
-    .dishes-list .menu-card:nth-child(3) {
-        animation-delay: 2.50s;
-    }
-
-    .desserts-list .menu-card:nth-child(1) {
-        animation-delay: 3.50s;
-    }
-    
-    .desserts-list .menu-card:nth-child(2) {
-        animation-delay: 3.75s;
-    }
-    
-    .desserts-list .menu-card:nth-child(3) {
-        animation-delay: 4s;
     }
 
     .restaurants-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -971,62 +677,17 @@
         row-gap: 20px;
     }
 
-    .restaurants-list img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    .new-badge {
-        display: flex;
-        border: 2px none black;
-        border-radius: 3px;
-        width: 80px;
-        height:29px;
-        z-index: 9999;
-        font-size: 12px;
-        font-weight: bold;
-        position: absolute;
-        background-color: #99E2D0;
-        color:#008766;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 20px;
-        right: 20px;              
-    }
-
-    .restaurant-text {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 0px 15px 15px;
-        margin-right: auto; 
-        text-overflow: ellipsis;
-    }
-
     .footer {
-        display: flex;
         flex-direction: row-reverse;
-        background-color: #353535;
-        padding: 22px 25px;
-        color: white;
         height: 80px;
-        font-family: roboto;
     }
 
     .footer-logo {
         display: flex;
-        padding-bottom: 10px;
     }
 
     .footer-logo-img {
-        display: flex;
         right: 0;
-        width: 137.582px;
-        height: 20px;
-        filter: brightness(0);
-        -webkit-filter: brightness(30);
         padding-left: 50px;
         transform: translateY(50px);
         margin-left: 15px;
@@ -1036,44 +697,22 @@
         align-items: center;
         justify-content: flex-end;
         flex-direction: row;
-        display: flex;
         gap: 20px;
         padding-top: 40px;
-        cursor: pointer;
         font-size: 13px;
-    }
-
-    .fa-footer {
-        padding-right: 10px;
-    }
-
-    .Pfooter {
-        font-family: Roboto;
-        font-weight: normal;
-
     }
 
     .Pfooter::first-letter {
         margin-left: 30px;
     }
 
-    .menu-background {
-        height: 400px;
-        object-fit: cover;
-        width: 100%;
-    }
-
     .menu-title {
-        font-family: 'Shrikhand';
-        display: flex;
         justify-content: center;
         padding-top: 45px;
     }
 
     .menu-title-fav {
-        display: flex;
         flex-direction: column;
-        padding-left: 60px;
         transform: translateY(3px);
     }
 
@@ -1082,218 +721,19 @@
         margin-left: 10%;
         margin-right: 10%;
         margin-top: -50px;
-        background-color: #F6F6F6;
         border-radius: 20px;
     }
 
-    .menu-links {
-        width: 100%;
-    }
-
-    .fa-palette {
-        transform: translateX(35px) translateY(20px);
-    }
-
-    .starters-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dishes-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desserts-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .title {
-        padding-top: 50px;
-        position: relative;
         right: -13%;
-        width: 50%;
-    }
-
-    .starters-title {
-        border-bottom: 3px solid #99E2D0;
-    }
-
-    .price-div {
-        display: flex;
-        align-items: center;
-        width: 40px;
-        transform: translateY(10px);
-    }
-
-    .check-div {
-        display: flex;
-        position: absolute;
-        background-color: #99E2D0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        border-radius: 0px 15px 15px 0px;
-        width: 0px;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: width 0.4s ease-in-out, visibility 0s linear 0.4s;
-        visibility: hidden;
-    }
- 
-    .check-button {
-        background-color: #99E2D0;
-        border: none;
-        display: flex;
-    }
-
-    .menu-card:hover .check-div {
-        visibility: visible;
-        width: 13%;
-        transition: width 0.4s ease-in-out, visibility 0s linear;
-    }
-
-    .menu-card:hover .price-div {
-        padding-right: 13%; 
-    }
-
-    .menu-card .price-div {
-        transition: padding-right 0.4s ease-in-out;
-    }
-
-    .fav-icon {
-        display: flex;
-        justify-content: flex-end;
-        right: 0;
-        position: absolute;
-        transform: translateY(50px);
-    }
-
-    .fa-fav::before {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        background-clip: text;
-        animation: 2s;
-    }
-
-    .fa-fav:active {
-        font-weight: bold;
-        -webkit-text-fill-color: transparent;
     }
 }
 
 
 /*DESKTOP*/
 @media (min-width:1024px) {
-    
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(128, 128, 128, 0.8); 
-        z-index: 9999; 
-        animation: fadeOverlay 3s ease-in-out forwards;
-    }
-    
-    @keyframes fadeOverlay {
-        0% {
-          background-color: rgba(128, 128, 128, 0.8);
-        }
-        100% {
-          background-color: rgba(128, 128, 128, 0);
-          opacity: 0;
-          visibility: hidden;
-          z-index: -1;
-        }
-      }
-
-    .loader {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background-color: #fff;
-        box-shadow: 32px 0 #fff, -32px 0 #fff;
-        position: relative;
-        animation: flash 0.75s ease-out 2 forwards;
-        z-index: 9999;
-        top: 50vw;
-        left: 50vw;
-      }
-      
-      @keyframes flash {
-        0%, 50% {
-          opacity: 1;
-          visibility: visible;
-          background-color: #FFF2;
-          box-shadow: 32px 0 #FFF2, -32px 0 #FFF;
-        }
-        100% {
-          opacity: 0;
-          visibility: hidden;
-        }
-      }
- 
-
-    .header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu-header {
-        display: flex;
-        padding: 25px 0px 25px 0px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .header-arrow {
-        display: flex;
-        position: relative;
-        width: 90%;
-    }
-
-    .header-logo {
-        display: flex;
-        position:absolute;
-    }
-
-    .logo {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        width: 200px;
-        height: 34.202px;
-    }
-
-    .location {
-        background-color: #EAEAEA;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: bold;
-        line-height: normal;
-        text-align: center;
-        padding: 17px;
-        font-family: roboto;
-    }
-
-    .fa-location-dot {
-        margin-right: 14px;
-    }
-
-    .headline {
-        text-align: center;
-        background-color: #F6F6F6;
-        font-family: roboto;
-    }
 
     .H1head {
-        padding-top: 25px;
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -1301,53 +741,12 @@
     }
 
     .phead {
-        padding-top: 0;
         padding-left: 30px;
         font-size: 18px;
-        font-style: normal;
-    }
-
-    .explore-button {
-        margin-top: 35px;
-        width: 218px;
-        height: 50px;
-        border-color: transparent;
-        border-radius: 30px;
-        color: white;
-        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
-        margin-bottom: 50px;
-        cursor: pointer;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        font-family: roboto;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: appearAnimation 1s forwards;
-        animation-delay: 4.25s;
-    }
-
-    
-
-    @keyframes appearAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        
-    }
-    }
-
-    .explore-button:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);;
-    }
-
-    .fonctionnement {
-        text-align: center;
-        font-family: roboto;
     }
 
     .H2fonc {
         padding-top: 40px;
-        font-weight: bold;
-        text-align: left;
         padding-left: 8%;
         padding-bottom: 25px;
     }
@@ -1355,67 +754,25 @@
     .fonctionnement-buttons {
         padding-left: 70px;
         padding-right: 70px;
-        padding-bottom: 25px;
     }
 
     .fonc-button {
         width: 28%;
-        height: 72.379px;
-        padding-bottom: 17px;
-        margin-bottom: 20px;
         margin-left: 2%;
-        border-radius: 20px;
-        border: none;
-        font-weight: bold;
         font-size: 15px;
-        background-color: #F6F6F6;
-        text-align: left;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-        font-family: roboto;
     }
 
     .fa-fonc-logo-1 {
-        padding-right: 20px;
         margin-left: 35px;
     }
 
     .fa-fonc-logo-2 {
-        padding-right: 17px;
         margin-left: 35px;
      
     }
 
     .fa-fonc-logo-3 {
-        padding-right: 17px;
         margin-left: 35px;
-    }
-
-    .fa-fonc-logo-1:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-2:hover {
-        color: #9356DC;
-    }
-
-    .fa-fonc-logo-3:hover {
-        color: #9356DC;
-    }
-
-    .numberedDots {
-        transform: translateX(-10px) translateY(17px);
-        justify-content: center;
-        text-decoration: none;
-        display: flex;
-        font-size: 12px;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border: none;
-        background-color: #9356DC;
-        color: white;
-        border-radius: 50%;
-        font-weight: normal;
     }
 
     .restaurants {
@@ -1426,28 +783,15 @@
     }
 
     .H3rest {
-        font-weight: bold;
-        font-size: 24px;
         padding-left: 8%;
-        padding-top: 50px;
-        padding-bottom: 10px;
-        font-family: roboto;
     }
 
     .card {
-        display: flex;
-        background-color: white;
-        border-radius: 15px;
-        margin-top: 20PX;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
         flex-direction: row;
-        flex-wrap: wrap;
         width: 40%;
-        font-family: roboto;
     }
 
     .restaurants-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -1456,101 +800,25 @@
         row-gap: 50px;
     }
 
-    .restaurants-list img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    .new-badge {
-        display: flex;
-        border: 2px none black;
-        border-radius: 3px;
-        width: 80px;
-        height:29px;
-        z-index: 9999;
-        font-size: 12px;
-        font-weight: bold;
-        position: absolute;
-        background-color: #99E2D0;
-        color:#008766;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 20px;
-        right: 30px;              
-    }
-
-    .restaurant-text {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 0px 15px 15px;
-        margin-right: auto; 
-        text-overflow: ellipsis;
-    }
-
-
-
     .footer {
-        display: flex;
-        flex-direction: row-reverse;
-        background-color: #353535;
-        padding: 22px 25px;
-        color: white;
+        flex-direction: row-reverse;  
         height: 80px;
-        font-family: roboto;
-    }
-
-    .footer-logo {
-        padding-bottom: 10px;
     }
 
     .footer-logo-img {
-        display: flex;
-        width: 137.582px;
-        height: 20px;
-        filter: brightness(0);
-        -webkit-filter: brightness(30);
         padding-left: 50px;
         transform: translateY(50px);
-        margin-left: 15px;
     }
 
     .footer-txt {
         align-items: center;
         justify-content: flex-end;
-        display: flex;
         gap: 20px;
         padding-top: 40px;
-        cursor: pointer;
-    }
-
-    .fa-footer {
-        padding-right: 10px;
-    }
-
-    .Pfooter {
-        font-family: Roboto;
-        font-weight: normal;
-
     }
 
     .Pfooter::first-letter {
         margin-left: 30px;
-    }
-
-    .menu-background {
-        height: 400px;
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .menu-title {
-        font-family: 'Shrikhand';
-        display: flex;
-        justify-content: center;
-        padding-top: 45px;
     }
 
     .menu {
@@ -1558,135 +826,11 @@
         margin-left: 10%;
         margin-right: 10%;
         margin-top: -50px;
-        background-color: #F6F6F6;
         border-radius: 20px;
     }
 
     .menu-card {
-        display: flex;
-        background-color: white;
-        border-radius: 15px;
-        margin-top: 20PX;
-        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-        flex-direction: row;
-        flex-wrap: wrap;
         width: 65%;
-        font-family: roboto;
-        overflow: hidden;
-        opacity: 0;
-        transform: translateY(20px);
-        animation: appearAnimation 0.5s forwards;
-    }
-
-    .menu-title,
-    .title,
-    .starters-title,
-    .dishes-title,
-    .desserts-title,
-    .starters-list,
-    .dishes-list,
-    .desserts-list {
-    opacity: 0;
-    transform: translateY(20px);
-    }
-
-    @keyframes appearAnimation {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    }
-
-    .menu-title,
-    .title,
-    .starters-title,
-    .dishes-title,
-    .desserts-title,
-    .starters-list,
-    .dishes-list,
-    .desserts-list {
-    animation: appearAnimation 0.5s forwards;
-    }
-
-    .menu-title {
-        animation-delay: 0s;
-    }
-
-    .menu-title .title {
-        animation-delay: 0.25s;
-    }
-
-    .menu-title .title .starters-title {
-        animation-delay: 1s;
-    }
-
-    .starters-list {
-        animation-delay: 1s;
-    }
-
-    .dishes-title {
-        border-bottom: 3px solid #99E2D0;
-        width: 50px;
-        animation-delay: 1.75s;
-    }
-
-    .dishes-list {
-        animation-delay: 2s;
-    }
-
-    .desserts-title {
-        animation-delay: 3s;
-        border-bottom: 3px solid #99E2D0;
-        width: 50px;
-    }
-
-    .desserts-list {
-        animation-delay: 3.25s;
-    }
-
-    .starters-list .menu-card:nth-child(1) {
-        animation-delay: 1s;
-    }
-    
-    .starters-list .menu-card:nth-child(2) {
-        animation-delay: 1.25s;
-    }
-    
-    .starters-list .menu-card:nth-child(3) {
-        animation-delay: 1.50s;
-    }
-
-    .starters-list .menu-card:nth-child(4) {
-        animation-delay: 1.75s;
-    }
-
-    .dishes-list .menu-card:nth-child(1) {
-        animation-delay: 2s;
-    }
-    
-    .dishes-list .menu-card:nth-child(2) {
-        animation-delay: 2.25s;
-    }
-    
-    .dishes-list .menu-card:nth-child(3) {
-        animation-delay: 2.50s;
-    }
-
-    .desserts-list .menu-card:nth-child(1) {
-        animation-delay: 3.50s;
-    }
-    
-    .desserts-list .menu-card:nth-child(2) {
-        animation-delay: 3.75s;
-    }
-    
-    .desserts-list .menu-card:nth-child(3) {
-        animation-delay: 4s;
-    }
-
-
-    .menu-links {
-        width: 100%;
     }
 
     .fa-palette {
@@ -1731,42 +875,6 @@
         transform: translateY(10px);
     }
 
-    .check-div {
-        display: flex;
-        position: absolute;
-        background-color: #99E2D0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        border-radius: 0px 15px 15px 0px;
-        width: 0px;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: width 0.4s ease-in-out, visibility 0s linear 0.4s;
-        visibility: hidden;
-    }
- 
-    .check-button {
-        background-color: #99E2D0;
-        border: none;
-        display: flex;
-    }
-
-    .menu-card:hover .check-div {
-        visibility: visible;
-        width: 13%;
-        transition: width 0.4s ease-in-out, visibility 0s linear;
-    }
-
-    .menu-card:hover .price-div {
-        padding-right: 13%; 
-    }
-
-    .menu-card .price-div {
-        transition: padding-right 0.4s ease-in-out;
-    }
-
     .menu-title-fav {
         display: flex;
         flex-direction: column;
@@ -1782,13 +890,8 @@
         transform: translateY(50px);
     }
 
-    .fa-fav::before {
+    .fa-fav:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        background-clip: text;
-        animation: 2s;
-    }
-
-    .fa-fav:active {
         font-weight: bold;
         -webkit-text-fill-color: transparent;
     }

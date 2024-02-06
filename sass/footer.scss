@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
+    padding: 22px 25px;
+    color: white;
+    font-family: roboto;
+    .footer-logo {
+        padding-bottom: 10px;
+        .footer-logo-img {
+            display: flex;
+            width: 137.582px;
+            height: 20px;
+            padding-bottom: 10px;
+            filter: brightness(0);
+            -webkit-filter: brightness(30);
+            align-items: flex-start;
+            .footer-txt {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .fa-footer {
+                    padding-right: 10px;
+                    .Pfooter {
+                        font-family: Roboto;
+                        font-weight: normal;
+                        font-size:smaller;
+                    }
+                }
+            }
+        }
+    }
+}   

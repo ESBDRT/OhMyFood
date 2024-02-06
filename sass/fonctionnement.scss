@@ -1,0 +1,77 @@
+.fonctionnement {
+    justify-content: center;
+    .H2fonc {
+        padding-top: 40px;
+        padding-left: 20px;
+        font-family: roboto;
+        .fonctionnement-buttons {
+            padding-bottom: 50px;
+            .fonc-button {
+                width: 85%;
+                height: 72.379px;
+                padding-bottom: 17px;
+                margin-bottom: 20px;
+                margin-left: 40px;
+                margin-right: 20px;
+                border-radius: 20px;
+                border: none;
+                font-family: roboto;
+                font-weight: bold;
+                font-size: 16px;
+                background-color: #F6F6F6;
+                text-align: left;
+                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+                .fonc-button:first-of-type {
+                    margin-top: 30px;
+                    .fa-fonc-logo-1 {
+                        padding-right: 20px;
+                        margin-left: 35px;
+                        color: #7E7E7E;
+                        .fa-fonc-logo-1:hover {
+                            color: #9356DC;
+                            .fa-fonc-logo-2 {
+                                padding-right: 17px;
+                                margin-left: 35px;
+                                color: #7E7E7E;
+                                .fa-fonc-logo-2:hover {
+                                    color: #9356DC;
+                                    .fa-fonc-logo-3 {
+                                        padding-right: 17px;
+                                        margin-left: 35px;
+                                        color: #7E7E7E;
+                                        .fa-fonc-logo-3:hover {
+                                            color: #9356DC;
+                                            .numberedDots {
+                                                transform: translateX(-10px) translateY(17px);
+                                                justify-content: center;
+                                                text-decoration: none;
+                                                display: flex;
+                                                font-size: 12px;
+                                                align-items: center;
+                                                width: 20px;
+                                                height: 20px;
+                                                border: none;
+                                                background-color: #9356DC;
+                                                color: white;
+                                                border-radius: 50%;
+                                                font-weight: normal;
+                                                .dots {
+                                                    margin-bottom: 25px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
