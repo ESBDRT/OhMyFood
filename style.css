@@ -3,8 +3,18 @@
     padding: 0;
 }
 
-/*MOBILE*/
-@media (min-width:0px) {
+.fa-fav {
+    transform: translateX(-30px) translateY(-30px);
+    font-size: 23px;
+}
+
+.fa-fav:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+    font-weight: bold;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip:text;
+}
 
     .overlay {
         position: fixed;
@@ -93,6 +103,7 @@
         text-align: center;
         padding: 17px;
         box-shadow: 0px 4px 10px 5px rgba(0, 0, 0, 0.25);
+        padding-left: 75px;
     }
 
     .location-input {
@@ -303,12 +314,6 @@
         transform: translateY(50px);
     }
 
-    .fa-fav {
-        transform: translateX(-30px) translateY(-20px);
-        background-clip: text;
-    }
-
-
     .footer {
         display: flex;
         flex-direction: column;
@@ -360,6 +365,10 @@
         border-radius: 50px;
         margin-top: -100px;
         position: relative;
+    }
+
+    .price {
+        padding-right: 15px;
     }
 
     .menu-card {
@@ -497,7 +506,7 @@
         display: flex;
         flex-direction: column-reverse;
         padding-left: 60px;
-        transform: translateY(-3px);
+        transform: translateY(15px);
     }
 
     .title {
@@ -538,6 +547,12 @@
         padding-top: 20px;
     }
 
+    .check-button {
+        background-color: #99E2D0;
+        border: none;
+        display: flex;
+    }
+
     .check-div {
         display: flex;
         position: absolute;
@@ -553,12 +568,6 @@
         transition: width 0.4s ease-in-out, visibility 0s linear 0.4s;
         visibility: hidden;
     }
- 
-    .check-button {
-        background-color: #99E2D0;
-        border: none;
-        display: flex;
-    }
 
     .menu-card:hover .check-div {
         visibility: visible;
@@ -573,7 +582,12 @@
     .menu-card .price-div {
         transition: padding-right 0.4s ease-in-out ;
     }
-}
+
+    .menu-title-fav {
+        flex-direction: column;
+        padding-left: 60px;
+        transform: translateY(42px);
+    }
 
 /*TABLETTE*/
 @media (min-width:601px) {
@@ -628,9 +642,8 @@
     .fonc-button {
         width: 28%;
         border-radius: 20px;
-        font-size: 11px;
+        font-size: 14px;
         margin-left: 0;
-
     }
 
     .fa-fonc-logo-1 {
@@ -716,11 +729,6 @@
         padding-top: 45px;
     }
 
-    .menu-title-fav {
-        flex-direction: column;
-        transform: translateY(3px);
-    }
-
     .menu {
         position: relative;
         margin-left: 10%;
@@ -731,6 +739,29 @@
 
     .title {
         right: -13%;
+        position: relative;
+    }
+
+    .starters-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dishes-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .desserts-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title {
+        position: relative;
     }
 }
 
@@ -752,18 +783,17 @@
 
     .H2fonc {
         padding-top: 40px;
-        padding-left: 8%;
+        padding-left: 10%;
         padding-bottom: 25px;
     }
 
     .fonctionnement-buttons {
-        padding-left: 70px;
-        padding-right: 70px;
+        padding-left: 4%;
+        padding-right: 3%;
     }
 
     .fonc-button {
         width: 28%;
-        margin-left: 2%;
         font-size: 15px;
     }
 
@@ -842,31 +872,6 @@
         transform: translateX(35px) translateY(20px);
     }
 
-    .starters-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dishes-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .desserts-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .title {
-        padding-top: 50px;
-        position: relative;
-        right: -16%;
-        width: 50%;
-        
-    }
 
     .starters-title {
         border-bottom: 3px solid #99E2D0;
@@ -880,13 +885,6 @@
         transform: translateY(10px);
     }
 
-    .menu-title-fav {
-        display: flex;
-        flex-direction: column;
-        padding-left: 60px;
-        transform: translateY(3px);
-    }
-
     .fav-icon {
         display: flex;
         justify-content: flex-end;
@@ -895,9 +893,7 @@
         transform: translateY(50px);
     }
 
-    .fa-fav:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        font-weight: bold;
-        -webkit-text-fill-color: transparent;
+    .title {
+        padding-left: 5%;
     }
 }
