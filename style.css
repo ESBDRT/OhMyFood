@@ -299,7 +299,7 @@
     .restaurant-text {
         display: flex;
         flex-direction: column;
-        padding: 15px 20px 15px 15px;   
+        padding: 15px 0px 15px 15px;   
         margin-right: auto; 
         text-overflow: ellipsis;
         overflow: hidden;
@@ -366,6 +366,7 @@
         border-radius: 50px;
         margin-top: -100px;
         position: relative;
+        font-size: 15px;
     }
 
     .price {
@@ -584,6 +585,9 @@
         transition: padding-right 0.4s ease-in-out ;
     }
     
+    .menu-card:hover .restaurant-text {
+        width: 50%;
+    }
 
     .menu-card:hover .restaurant-text h3 {
         text-overflow: ellipsis;
