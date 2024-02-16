@@ -299,9 +299,11 @@
     .restaurant-text {
         display: flex;
         flex-direction: column;
-        padding: 15px 0px 15px 15px;   
+        padding: 15px 20px 15px 15px;   
         margin-right: auto; 
         text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
     .fav-icon {
@@ -581,6 +583,21 @@
     .menu-card .price-div {
         transition: padding-right 0.4s ease-in-out ;
     }
+    
+
+    .menu-card:hover .restaurant-text h3 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .menu-card:hover .restaurant-text p {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+
 
     .menu-title-fav {
         flex-direction: column;
